@@ -15,8 +15,7 @@ getgenv().DaHoodSettings = {
     AimLock = false,
     Prediction = 0.11243,
     AimLockKeybind = Enum.KeyCode.E,
-    AUTO_PREDICTION = false,
-    KnockedCheck = false
+    AUTO_PREDICTION = false
 }
 getgenv().DaHoodSettings = DaHoodSettings
 
@@ -63,22 +62,6 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
     end)
-
-    if getgenv().DaHoodSettings.KnockedCheck == true then
-    if not (getgenv().Aimlock == true and Aiming.Selected ~= LocalPlayer and Aiming.SelectedPart ~= nil) then
-        return false
-    end
-
-    local Character = Aiming.Character(Aiming.Selected)
-    local KOd = Character:WaitForChild("BodyEffects")["K.O"].Value
-    local Grabbed = Character:FindFirstChild("GRABBING_CONSTRAINT") ~= nil
-
-    if (KOd or Grabbed) then
-        return false
-    end
-
-    return true
-end
 
 if getgenv().DaHoodSettings.AUTO_PREDICTION == true then
     pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
