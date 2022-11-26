@@ -22,33 +22,28 @@ getgenv().DaHoodSettings = DaHoodSettings
 
 getgenv().GunSettings = {
 
-    ["Double-Barrel SG"] = { --// dh
 
-        ["FOV"] = 23
-
-    },
-
-    ["Double Barrel SG"] = {
-
-        ["FOV"] = 23
-
-    },
 
     ["DoubleBarrel"] = {
 
-    ["FOV"] = 23
+    ["FOV"] = 13
 
     },
 
     ["Revolver"] = {
 
-        ["FOV"] = 27.5
+        ["FOV"] = 12.5
+
+    },
+    ["TacticalShotgun"] = { 
+
+        ["FOV"] = 16
 
     },
 
     ["SMG"] = {
 
-        ["FOV"] = 50
+        ["FOV"] = 15
 
     },
 
@@ -76,9 +71,14 @@ getgenv().GunSettings = {
 
     },
 
+    ["AK47"] = {
+
+        ["FOV"] = 25
+
+    }
+
 
 }
-
 
 
 
